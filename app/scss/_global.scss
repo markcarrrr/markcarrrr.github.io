@@ -1,0 +1,201 @@
+@import 'bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import 'variables';
+
+@mixin link () {
+	border-bottom: 1px dotted $accent-5;
+	color: $accent-5;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+	display: none !important;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: $neutral-1;
+	color: $neutral-3;
+	font-family: $font-stack2;
+	line-height: 1.5;
+	padding: 20px;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1 {
+	color: $accent-1;
+	font-family: $font-stack1;
+	font-size: em(60, 16);
+	line-height: 1.25;
+	margin: 0;
+	text-align: center;
+
+	b {
+		white-space: nowrap;
+	}
+
+	span {
+		color: $accent-5;
+		display: block;
+		font-size: em(80, 140);
+		white-space: nowrap;
+	}
+}
+
+h2 {
+	color: $accent-4;
+	font-family: $font-stack1;
+	font-size: em(40, 16);
+	margin: 0 0 20px;
+}
+
+h3 {
+	clear: both;
+	color: $accent-1;
+	font-family: $font-stack1;
+	font-size: em(40, 16);
+	line-height: 1;
+	margin: 0 0 20px;
+}
+
+p {
+	margin: 0 0 20px;
+}
+
+a {
+	@include link;
+	transition: border 200ms ease-in;
+
+	&:hover,
+	&:focus {
+		border-bottom-color: transparent;
+	}
+}
+
+.is-accessible {
+	left: -999em;
+	position: absolute;
+}
+
+.call-to {
+	@include link;
+	display: inline-block;
+	font-size: em(20, 16);
+	margin: 0 10px;
+	position: relative;
+
+	&:after {
+		content: '\203A';
+		margin: 0 5px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		transform: translate3d(-20px ,0 ,0);
+		transition: all 300ms ease-in;
+		width: 100%;
+	}
+
+	&:hover,
+	&:focus {
+		border-bottom-color: inherit;
+
+		&:after {
+			transform: translate3d(100% ,0 ,0);
+		}
+	}
+}
+
+.more-link {
+	@include link;
+	display: inline-block;
+	margin: 0 10px 30px 0;
+	position: relative;
+
+	&:after {
+		content: '\25bc';
+		font-size: 11px;
+		position: absolute;
+		transform: rotate(0);
+		right: -16px;
+		transition: all 300ms ease-in;
+		top: 5px;
+	}
+
+	&:hover,
+	&:focus {
+		border-bottom-color: inherit;
+
+		&:after {
+			transform: rotate(360deg);
+		}
+	}
+}
+
+strong {
+	color: $accent-1;
+	font-weight: 700;
+	font-size: em(20, 16);
+}
+
+blockquote {
+	font-family: $font-stack3;
+	font-size: em(20, 16);
+	text-align: right;
+
+	&:after,
+	&:before {
+		color: $accent-5;
+		content: '\201C';
+		display: inline-block;
+		font-family: $font-stack1;
+		font-size: em(40, 16);
+		margin: -0.4em 0 0 -0.55em;
+		position: absolute;
+	}
+
+	&:after {
+		content: '\201D';
+		margin: -0.3em 0 0 0.1em;
+	}
+
+	a {
+		border-bottom-width: 3px;
+	}
+}
+
+@media only screen and (min-width: $breakpoint-1) {
+	h1 {
+		display: inline-block;
+		text-align: right;
+		vertical-align: middle;
+	}
+
+	h2 {
+		font-size: em(60, 16);
+	}
+
+	blockquote {
+		font-size: em(32, 16);
+	}
+}
+
+@media only screen and (min-width: $breakpoint-2) {
+	h1 {
+		font-size: em(100, 16);
+	}
+
+	h2 {
+		margin-left: -60px;
+	}
+
+	blockquote {
+		font-size: em(48, 16);
+		margin: 80px -100px 80px -140px;
+	}
+}

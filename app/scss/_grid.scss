@@ -1,0 +1,64 @@
+@import 'bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import 'variables';
+
+$one-grid:							8.33333%;
+
+.row {
+	@include clearfix;
+	margin: 0 -20px 40px;
+}
+
+@media only screen and (min-width: $breakpoint-2) {
+	[class^="col"] {
+		float: left;
+		padding: 0 20px;
+	}
+
+	.col-1 {
+		width: $one-grid*1;
+	}
+
+	.col-2 {
+		width: $one-grid*2;
+	}
+
+	.col-3 {
+		width: $one-grid*3;
+	}
+
+	.col-4 {
+		width: $one-grid*4;
+	}
+
+	.col-5 {
+		width: $one-grid*5;
+	}
+
+	.col-6 {
+		width: $one-grid*6;
+	}
+
+	.col-7 {
+		width: $one-grid*7;
+	}
+
+	.col-8 {
+		width: $one-grid*8;
+	}
+
+	.col-9 {
+		width: $one-grid*9;
+	}
+
+	.col-10 {
+		width: $one-grid*10;
+	}
+
+	.col-11 {
+		width: $one-grid*11;
+	}
+
+	.col-12 {
+		width: 100%;
+	}
+}

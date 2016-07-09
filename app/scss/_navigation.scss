@@ -1,0 +1,171 @@
+.main-menu {
+	@include clearfix;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.icon-menu {
+	background-color: $neutral-1;
+	border: 0;
+	cursor: pointer;
+	float: right;
+	height: 72px;
+	outline: 0;
+	padding: 0;
+	position: relative;
+	text-indent: -999em;
+	width: 72px;
+	z-index: 1040;
+}
+
+.icon-menu:after,
+.icon-menu:before {
+	content: '';
+	border-bottom: 4px solid $accent-1;
+	border-top: 4px solid  $accent-1;
+	display: block;
+	height: 8px;
+	margin: 0 auto;
+	width: 32px;
+	transition: all 200ms ease-in;
+}
+
+.icon-menu:after {
+	border-top: 0;
+	height: 0;
+	margin-top: 8px;
+}
+
+.icon-menu:hover,
+.icon-menu:focus {
+	&:after,
+	&:before {
+		height: 5px;
+	}
+
+	&:after {
+		transform: rotate(-45deg);
+	}
+
+	&:before {
+		border-bottom: 0;
+		transform: rotate(45deg);
+	}
+}
+
+.overlay-background {
+	background: $neutral-2;
+	height: 100%;
+	left: 0;
+	opacity: 0.3;
+	position: fixed;
+	top: 0;
+	transition: all 300ms ease-in;
+	visibility: visible;
+	width: 100%;
+	z-index: 1020;
+}
+
+.menu-items {
+	background-color: $neutral-1;
+	box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.7);
+	margin: 0;
+	max-width: 320px;
+	opacity: 1;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 73px;
+	transform: translate3d(0, 0, 0);
+	transition: all 300ms ease-in;
+	visibility: visible;
+	z-index: 1030;
+
+	&.ng-hide {
+		max-height: none;
+		opacity: 0;
+		transform: translate3d(100%, 0, 0);
+		visibility: hidden;
+
+		+ .icon-menu {
+			&:hover,
+			&:focus {
+				&:after {
+					transform: rotate(45deg);
+				}
+
+				&:before {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+
+		~ .overlay-background {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	li {
+		list-style: none;
+
+		+ li {
+			a {
+				border-top: 2px dotted $accent-5;
+			}
+		}
+	}
+
+	label {
+		display: block;
+	}
+
+	a {
+		border-bottom: 0;
+		color: $accent-5;
+		display: block;
+		font-size: em(22, 16);
+		overflow: hidden;
+		padding: 20px 40px;
+		position: relative;
+		transition: color 200ms linear;
+		z-index: 10;
+
+		small {
+			transition: color 200ms linear;
+		}
+
+		&:before {
+			background-color: $accent-5;
+			content: '';
+			height: 100%;
+			left: -100%;
+			position: absolute;
+			top: 0;
+			transition: all 350ms ease-in-out;
+			transform: translate3d(-100%, 0, 0);
+			width: 100%;
+			z-index: -1;
+		}
+
+		&:hover,
+		&:focus {
+			color: $neutral-1;
+
+			&:before {
+				left: 0;
+				transform: translate3d(0, 0, 0);
+			}
+
+			small {
+				color: $neutral-1;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: $breakpoint-1) {
+	.main-menu {
+		margin-bottom: -48px;
+	}
+}

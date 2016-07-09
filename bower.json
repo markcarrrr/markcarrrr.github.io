@@ -1,0 +1,23 @@
+{
+  "name": "markcarrrr.github.io",
+  "description": "portfolio",
+  "main": "gulpfile.js",
+  "authors": [
+    "Mark Carr"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/markcarrrr/markcarrrr.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^4.1.1"
+  },
+  "devDependencies": {
+    "svg4everybody": "^2.1.0"
+  }
+}

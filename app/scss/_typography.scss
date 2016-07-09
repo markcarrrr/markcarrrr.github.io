@@ -1,0 +1,26 @@
+@import 'bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import 'variables';
+
+@font-face {
+	font-family: 'Pacifico';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/pacifico.woff2') format('woff2'),
+		 url('../fonts/pacifico.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/raleway.woff2') format('woff2'),
+		 url('../fonts/raleway.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Raleway-Light';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/raleway-light.woff2') format('woff2'),
+		 url('../fonts/raleway-light.woff') format('woff');
+}

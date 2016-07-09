@@ -1,0 +1,4 @@
+.ng-hide:not(.ng-hide-animate) {
+  display: block !important;
+  max-height: 0;
+  opacity: 0; }

@@ -1,0 +1,29 @@
+{
+  "name": "markcarrrr.github.io",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-useref": "^3.1.0",
+    "require-dir": "^0.3.0"
+  },
+  "devDependencies": {
+    "gulp-sass": "^2.3.2",
+    "gulp-serve": "^1.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markcarrrr/markcarrrr.github.io.git"
+  },
+  "author": "Mark Carr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markcarrrr/markcarrrr.github.io/issues"
+  },
+  "homepage": "https://github.com/markcarrrr/markcarrrr.github.io#readme"
+}

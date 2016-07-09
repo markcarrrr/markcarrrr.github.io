@@ -1,0 +1,14 @@
+@import 'bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import 'variables';
+
+footer {
+	ul {
+		padding: 0;
+		text-align: center;
+	}
+
+	li {
+		list-style: none;
+		padding: 0;
+	}
+}

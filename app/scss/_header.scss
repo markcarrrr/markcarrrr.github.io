@@ -1,0 +1,27 @@
+header {
+	white-space: nowrap;
+}
+
+.avatar {
+	@media (min-width: $breakpoint-1) {
+		margin-left: 20px;
+	}
+
+	@media (min-width: $breakpoint-2) {
+		display: inline-block;
+		margin-bottom: 30px;
+		margin-left: 40px;
+		vertical-align: middle;
+	}
+
+	img {
+		border: 12px solid $neutral-3;
+		border-radius: 50%;
+		width: 180px;
+
+		@media (min-width: $breakpoint-2) {
+			border-width: 18px;
+			width: auto;
+		}
+	}
+}
