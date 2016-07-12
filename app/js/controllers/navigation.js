@@ -1,9 +1,16 @@
 (function() {
+	'use strict';
 
-	mcApp.controller('Navigation', ['$scope', '$http', '$sce', function ($scope, $http, $sce) {
+	MCAPP.controller('navigation', ['$scope', '$http', '$sce', function ($scope, $http, $sce) {
 
-		$scope.toggleNav = function() {
+		$scope.currentIndex = 0;
+
+		$scope.toggleNav = function($index) {
 			$scope.toggle = !$scope.toggle;
+
+			if(angular.isDefined($index)) {
+				$scope.currentIndex = $index;
+			}
 		};
 
 		$http({
@@ -11,7 +18,9 @@
 			url: '../data/navigation-items.json'
 		}).then(function successCallback(response) {
 			$scope.listItems = response.data;
-		}, function errorCallback(response) {});
+		}, function errorCallback(response) {
+			// HANDLE ERROR!
+		});
 
 	}]);
 

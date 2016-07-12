@@ -1,7 +1,10 @@
 (function() {
-	mcApp.controller('header', ['$scope', function ($scope) {
+	'use strict';
+
+	MCAPP.controller('header', ['$scope', function ($scope) {
 
 		$scope.name = 'Mark';
 
 	}]);
+
 })();

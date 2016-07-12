@@ -1,10 +1,10 @@
 [
 	{
-		"link": "#about-me",
+		"link": "#/",
 		"text": "About me"
 	},
 	{
-		"link": "#case-studies",
+		"link": "#/case-studies",
 		"text": "Case studies"
 	}
 ]

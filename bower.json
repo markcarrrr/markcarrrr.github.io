@@ -18,6 +18,9 @@
     "normalize-css": "^4.1.1"
   },
   "devDependencies": {
-    "svg4everybody": "^2.1.0"
+    "svg4everybody": "^2.1.0",
+    "bourbon": "^4.2.7",
+    "AngularJS": "angular-latest#^1.5.7",
+    "angular": "^1.5.7"
   }
 }

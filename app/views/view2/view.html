@@ -1,0 +1,52 @@
+<blockquote>{{content.quote}}</blockquote>
+
+<div class="pull-out">
+	<h2>Case studies</h2>
+
+	<div class="row row-style2">
+
+		<section class="col-5">
+			<h3>Search results</h3>
+			<p>Out of some of my recent work I am most proud of the search results I built whilst working for John Wiley &amp; Sons&hellip;</p>
+			<div class="more-wrapper">
+				<div class="more-content" ng-show="caseStudy1">
+					<p>The JavaScript was built as a <strong>RequireJS</strong> module utilising <strong>jQuery</strong> where necessary.</p>
+					<p>The module was documented using <strong>JSDoc</strong> and <strong>Unit Tests</strong> written with <strong>Mocha</strong>.</p>
+					<p>There was also some <strong>CSS</strong> I was particularly proud of including the 'Narrow your results' filter styling.</p>
+				</div>
+				<a class="more-link" ng-click="caseStudy1 = !caseStudy1">read more</a>
+			</div>
+			<a href="http://aasldpubs.onlinelibrary.wiley.com/hub/results/?search=dynamic+rupture&amp;journal-doi=all" class="call-to">View search results</a>
+		</section>
+
+		<section class="col-7">
+			<h3>Tabs</h3>
+			<p>I took a lot of pride and recevied great feedback for these AJAX'd and cached tabs I built for Wiley. Part of the specification was to return the user to the exact point they had navigated from&hellip;</p>
+			<div class="more-wrapper">
+				<div class="more-content" ng-show="caseStudy2">
+					<p>I wrote a <strong>fa&ccedil;ade</strong> module for localstorage which also came in really useful down the road for other tasks.</p>
+					<p>Using <strong>localstorage</strong> I saved the state of the current tab, content and scroll position. This plays nicely with the 'more' link functionality contained in the tabs also.</p>
+					<p>One think I notice sites rarely take you back to the correct state after navigating away from content dynamically loaded. I was very <strong>conscious</strong> of this whilst developing.</p>
+				</div>
+				<a class="more-link" ng-click="caseStudy2 = !caseStudy2">read more</a>
+			</div>
+			<a href="http://agupubs.onlinelibrary.wiley.com/agu/jgr/journal/10.1002/(ISSN)2169-9356/#anchor-feed" class="call-to">View those tabs</a>
+		</section>
+
+		<section class="col-12">
+			<h3>Custom site development</h3>
+			<p>I worked on a complete custom build for a site called Ozy whilst at Abacus.</p>
+			<p>This was a very exciting project for me as it not only pushed me further than any other project but helped me grow as a developer. Not to mention the oppurtunity to work out in Mountain View, California also.</p>
+			<p>The site was also featured as part of the <a href="https://www.podcat.com/podcasts/RuWr8T-a-responsive-web-design-podcast/episodes/3XL1Kg-episode-48-ozy">'A Responsive Web Design Podcast'</a></p>
+			<div class="more-wrapper">
+				<div class="more-content" ng-show="caseStudy3">
+					<p>For the initial phase I worked alongside a Designer, Developer and Project Manager giving advice on frontend development, timescales, <strong>prototyping</strong> concepts and building the base code for the project.</p>
+					<p>I returned to the UK to work alongside a wider <strong>team</strong> of Frontend Developers to complete the project.</p>
+					<p>Naturally over time the site has been <strong>refactored</strong> and redeveloped but the homepage has stayed relatively true to my <Strong>original build</Strong> and it's still a site I feel proud to have been a part of.</p>
+				</div>
+				<a class="more-link" ng-click="caseStudy3 = !caseStudy3">read more</a>
+			</div>
+			<a href="http://www.ozy.com/" class="call-to">View that site</a>
+		</section>
+	</div>
+</div>

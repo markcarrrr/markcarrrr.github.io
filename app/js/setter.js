@@ -1,1 +1,1 @@
-var mcApp = angular.module('mcApp', ['ngSanitize']);
+var MCAPP = angular.module('mcApp', ['ngRoute', 'ngSanitize', 'ngAnimate']);
