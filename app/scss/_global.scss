@@ -21,7 +21,6 @@ body {
 	color: $neutral-3;
 	font-family: $font-stack2;
 	line-height: 1.5;
-	padding: 20px;
 }
 
 img {
@@ -35,6 +34,16 @@ h1 {
 	line-height: 1.25;
 	margin: 0;
 	text-align: center;
+
+	@media (min-width: $breakpoint-1) {
+		display: inline-block;
+		text-align: right;
+		vertical-align: middle;
+	}
+
+	@media (min-width: $breakpoint-2) {
+		font-size: em(100, 16);
+	}
 
 	b {
 		white-space: nowrap;
@@ -53,6 +62,14 @@ h2 {
 	font-family: $font-stack1;
 	font-size: em(40, 16);
 	margin: 0 0 20px;
+
+	@media (min-width: $breakpoint-1) {
+		font-size: em(60, 16);
+	}
+
+	@media (min-width: $breakpoint-2) {
+		margin-left: -60px;
+	}
 }
 
 h3 {
@@ -146,11 +163,24 @@ strong {
 blockquote {
 	font-family: $font-stack3;
 	font-size: em(20, 16);
+	margin: 20px auto;
+	max-width: 320px;
 	text-align: right;
+
+	@media (min-width: $breakpoint-1) {
+		font-size: em(32, 16);
+		max-width: 500px;
+	}
+
+	@media (min-width: $breakpoint-2) {
+		font-size: em(48, 16);
+		margin-bottom: 80px;
+		max-width: 700px;
+	}
 
 	&:after,
 	&:before {
-		color: $accent-5;
+		color: $accent-4;
 		content: '\201C';
 		display: inline-block;
 		font-family: $font-stack1;
@@ -166,36 +196,5 @@ blockquote {
 
 	a {
 		border-bottom-width: 3px;
-	}
-}
-
-@media only screen and (min-width: $breakpoint-1) {
-	h1 {
-		display: inline-block;
-		text-align: right;
-		vertical-align: middle;
-	}
-
-	h2 {
-		font-size: em(60, 16);
-	}
-
-	blockquote {
-		font-size: em(32, 16);
-	}
-}
-
-@media only screen and (min-width: $breakpoint-2) {
-	h1 {
-		font-size: em(100, 16);
-	}
-
-	h2 {
-		margin-left: -60px;
-	}
-
-	blockquote {
-		font-size: em(48, 16);
-		margin: 80px -100px 80px -140px;
 	}
 }

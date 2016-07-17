@@ -1,8 +1,11 @@
 header {
+	text-align: center;
 	white-space: nowrap;
 }
 
 .avatar {
+	position: relative;
+
 	@media (min-width: $breakpoint-1) {
 		margin-left: 20px;
 	}

@@ -2,13 +2,19 @@
 @import 'variables';
 
 footer {
+	background-color: $neutral-3;
+	border-top: 10px solid $accent-4;
+	padding: 20px;
+
 	ul {
+		margin: 0;
 		padding: 0;
 		text-align: center;
 	}
 
 	li {
 		list-style: none;
+		margin: 0;
 		padding: 0;
 	}
 }

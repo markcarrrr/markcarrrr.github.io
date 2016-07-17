@@ -10,36 +10,33 @@
 	</head>
 	<body>
 
-		<div class="wrapper">
-			<div class="container">
-				<nav class="main-menu" ng-cloak ng-controller="navigation">
-					<ul class="menu-items" ng-show="toggle">
-						<li ng-repeat="item in listItems track by item.link" ng-class="{current: $index == currentIndex}"><a href="{{item.link}}" ng-click="toggleNav($index)" ng-bind-html="item.text"></a></li>
-					</ul>
-					<button type="button" class="icon-menu" ng-click="toggleNav()"><span class="is-accessible">Toggle Menu</span></button>
-					<span class="overlay-background" ng-click="toggle = false"></span>
-				</nav>
+		<div class="container">
+			<nav class="main-menu" ng-cloak ng-controller="navigation">
+				<ul class="menu-items" ng-show="toggle">
+					<li ng-repeat="item in listItems track by item.link" ng-class="{current: $index == currentIndex}"><a href="{{item.link}}" ng-click="toggleNav($index)" ng-bind-html="item.text"></a></li>
+				</ul>
+				<button type="button" class="icon-menu" ng-click="toggleNav()"><span class="is-accessible">Toggle Menu</span></button>
+				<span class="overlay-background" ng-click="toggle = false"></span>
+			</nav>
 
-				<header ng-controller="header">
-					<h1>Hi, I'm {{name}} <span>a frontend developer</span></h1>
-					<figure class="avatar">
-						<img src="images/avatar-2.jpg" srcset="images/avatar-1.jpg 180w, images/avatar-2.jpg 300w" sizes="(min-width: 1004px) 300px, 180px" alt="">
-					</figure>
-				</header>
+			<header ng-controller="header">
+				<h1>Hi, I'm {{name}} <span>a frontend developer</span></h1>
+				<figure class="avatar">
+					<img src="images/avatar-2.jpg" srcset="images/avatar-1.jpg 180w, images/avatar-2.jpg 300w" sizes="(min-width: 1004px) 300px, 180px" alt="">
+				</figure>
+			</header>
 
-				<div class="content {{page.contentClass}}" ng-view>
-				</div>
+			<div class="content-wrapper {{page.contentClass}}" ng-view></div>
 
-				<footer>
-					<ul>
-						<li class="icon icon-github"><a href="https://github.com/markcarrrr"><span class="is-accessible">My Github</span><svg><use xlink:href="images/sprite.svg#icon-github"></use></svg></a></li>
-						<li class="icon icon-codepen"><a href="https://codepen.io/markcarrrr/"><span class="is-accessible">My Codepen</span><svg><use xlink:href="images/sprite.svg#icon-codepen"></use></svg></a></li>
-						<li class="icon icon-twitter"><a href="https://twitter.com/markcarrrr"><span class="is-accessible">My Twitter</span><svg><use xlink:href="images/sprite.svg#icon-twitter"></use></svg></a></li>
-						<li class="icon icon-linkedin"><a href="https://www.linkedin.com/in/markcarrrr"><span class="is-accessible">My LinkedIn</span><svg><use xlink:href="images/sprite.svg#icon-linkedin"></use></svg></a></li>
-					</ul>
-				</footer>
+			<footer>
+				<ul>
+					<li class="icon icon-github"><a href="https://github.com/markcarrrr"><span class="is-accessible">My Github</span><svg><use xlink:href="images/sprite.svg#icon-github"></use></svg></a></li>
+					<li class="icon icon-codepen"><a href="https://codepen.io/markcarrrr/"><span class="is-accessible">My Codepen</span><svg><use xlink:href="images/sprite.svg#icon-codepen"></use></svg></a></li>
+					<li class="icon icon-twitter"><a href="https://twitter.com/markcarrrr"><span class="is-accessible">My Twitter</span><svg><use xlink:href="images/sprite.svg#icon-twitter"></use></svg></a></li>
+					<li class="icon icon-linkedin"><a href="https://www.linkedin.com/in/markcarrrr"><span class="is-accessible">My LinkedIn</span><svg><use xlink:href="images/sprite.svg#icon-linkedin"></use></svg></a></li>
+				</ul>
+			</footer>
 
-			</div>
 		</div>
 
 	<!--build:js js/main.js-->

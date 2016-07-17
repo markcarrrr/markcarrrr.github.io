@@ -2,6 +2,12 @@
 	@include clearfix;
 	margin-bottom: 20px;
 	position: relative;
+
+	@media (min-width: $breakpoint-1) {
+		background-color: $neutral-3;
+		border-bottom: 10px solid $accent-1;
+		text-align: center;
+	}
 }
 
 .icon-menu {
@@ -16,6 +22,10 @@
 	text-indent: -999em;
 	width: 72px;
 	z-index: 1040;
+
+	@media (min-width: $breakpoint-1) {
+		display: none;
+	}
 }
 
 .icon-menu:after,
@@ -64,11 +74,14 @@
 	visibility: visible;
 	width: 100%;
 	z-index: 1020;
+
+	@media (min-width: $breakpoint-1) {
+		display: none;
+	}
 }
 
 .menu-items {
-	background-color: $neutral-1;
-	box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.7);
+	background-color: $neutral-3;
 	margin: 0;
 	max-width: 320px;
 	opacity: 1;
@@ -81,11 +94,23 @@
 	visibility: visible;
 	z-index: 1030;
 
+	@media (min-width: $breakpoint-1) {
+		background-color: transparent;
+		max-width: none;
+		position: static;
+	}
+
 	&.ng-hide {
 		max-height: none;
 		opacity: 0;
 		transform: translate3d(100%, 0, 0);
 		visibility: hidden;
+
+		@media (min-width: $breakpoint-1) {
+			opacity: 1;
+			transform: none;
+			visibility: visible;
+		}
 
 		+ .icon-menu {
 			&:hover,
@@ -109,20 +134,37 @@
 	li {
 		list-style: none;
 
-		+ li {
+		@media (min-width: $breakpoint-1) {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		&.current {
+			background-color: $accent-1;
 			a {
-				border-top: 2px dotted $accent-5;
+				cursor: text;
+			}
+		}
+
+		&:not(.current) {
+			a:hover,
+			a:focus {
+				color: $neutral-1;
+
+				&:before {
+					transform: translate3d(0, 0, 0);
+				}
+
+				small {
+					color: $neutral-1;
+				}
 			}
 		}
 	}
 
-	label {
-		display: block;
-	}
-
 	a {
-		border-bottom: 0;
-		color: $accent-5;
+		border: 0;
+		color: $neutral-1;
 		display: block;
 		font-size: em(22, 16);
 		overflow: hidden;
@@ -136,36 +178,20 @@
 		}
 
 		&:before {
-			background-color: $accent-5;
+			background-color: $accent-1;
 			content: '';
 			height: 100%;
-			left: -100%;
+			left: 0;
 			position: absolute;
 			top: 0;
-			transition: all 350ms ease-in-out;
+			transition: all 200ms ease-in-out;
 			transform: translate3d(-100%, 0, 0);
 			width: 100%;
 			z-index: -1;
-		}
 
-		&:hover,
-		&:focus {
-			color: $neutral-1;
-
-			&:before {
-				left: 0;
-				transform: translate3d(0, 0, 0);
-			}
-
-			small {
-				color: $neutral-1;
+			@media (min-width: $breakpoint-1) {
+				transform: translate3d(0, -100%, 0);
 			}
 		}
-	}
-}
-
-@media only screen and (min-width: $breakpoint-1) {
-	.main-menu {
-		margin-bottom: -48px;
 	}
 }
