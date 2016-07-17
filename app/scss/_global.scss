@@ -2,8 +2,8 @@
 @import 'variables';
 
 @mixin link () {
-	border-bottom: 1px dotted $accent-5;
-	color: $accent-5;
+	border-bottom: 1px solid $accent-1;
+	color: $accent-1;
 	cursor: pointer;
 	text-decoration: none;
 }
@@ -87,7 +87,7 @@ p {
 
 a {
 	@include link;
-	transition: border 200ms ease-in;
+	transition: border 100ms ease-in;
 
 	&:hover,
 	&:focus {
@@ -155,7 +155,7 @@ a {
 }
 
 strong {
-	color: $accent-1;
+	color: $accent-5;
 	font-weight: 700;
 	font-size: em(20, 16);
 }
@@ -174,7 +174,6 @@ blockquote {
 
 	@media (min-width: $breakpoint-2) {
 		font-size: em(48, 16);
-		margin-bottom: 80px;
 		max-width: 700px;
 	}
 
